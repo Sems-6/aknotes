@@ -9,5 +9,3 @@
  - **Gender Studies** (Waste of time - No Classes has been taken)
  - **MySql**
 ---
-- [x]
-- [ ]
