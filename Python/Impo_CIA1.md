@@ -1,3 +1,5 @@
+# Pythonl
+
  - list tuple
  - operators
  - while for loops
@@ -5,4 +7,3 @@
  - history of python
  - string (full)
  - Data Types
- - 
