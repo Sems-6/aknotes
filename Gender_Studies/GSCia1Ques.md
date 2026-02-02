@@ -7,5 +7,5 @@
 - short note social contruction of family
 - what is meant by biological determination of gender
 - difference between exclusiveness and inclusiveness
-- list out of the social contruction pof feminine
+- list out of the social contruction of feminine
 - explain the evolution in gender inequality
