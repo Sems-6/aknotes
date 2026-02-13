@@ -1,0 +1,66 @@
+MariaDB [(none)]> create database amar;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> use amar;
+Database changed
+MariaDB [amar]> create table employee()
+    -> ^C
+    -> aekend;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+aekend' at line 1
+MariaDB [amar]> create table employee(
+    -> empid INT PRIMARY KEY,
+    -> name VARCHAR(50),
+    -> designation VARCHAR(30),
+    -> age INT,
+    -> salary DECIMAL(10,2));
+Query OK, 0 rows affected (0.008 sec)
+
+MariaDB [amar]> desc employee
+    -> ;
++-------------+---------------+------+-----+---------+-------+
+| Field       | Type          | Null | Key | Default | Extra |
++-------------+---------------+------+-----+---------+-------+
+| empid       | int(11)       | NO   | PRI | NULL    |       |
+| name        | varchar(50)   | YES  |     | NULL    |       |
+| designation | varchar(30)   | YES  |     | NULL    |       |
+| age         | int(11)       | YES  |     | NULL    |       |
+| salary      | decimal(10,2) | YES  |     | NULL    |       |
++-------------+---------------+------+-----+---------+-------+
+MariaDB [amar]>
+MariaDB [amar]>
+MariaDB [amar]>
+MariaDB [amar]> alter TABLE employee ADD COLOUMN department VARCHAR(50);
+ERROR 4161 (HY000): Unknown data type: 'department'
+MariaDB [amar]> alter TABLE employee ADD COLUMN department VARCHAR(50);
+Query OK, 0 rows affected (0.019 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [amar]> alter table employee drop column department
+    -> ;
+Query OK, 0 rows affected (0.009 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [amar]> desc employee
+    -> ;
++-------------+---------------+------+-----+---------+-------+
+| Field       | Type          | Null | Key | Default | Extra |
++-------------+---------------+------+-----+---------+-------+
+| empid       | int(11)       | NO   | PRI | NULL    |       |
+| name        | varchar(50)   | YES  |     | NULL    |       |
+| designation | varchar(30)   | YES  |     | NULL    |       |
+| age         | int(11)       | YES  |     | NULL    |       |
+| salary      | decimal(10,2) | YES  |     | NULL    |       |
++-------------+---------------+------+-----+---------+-------+
+5 rows in set (0.001 sec)
+
+MariaDB [amar]> RENAME TABLE employee TO staff;
+Query OK, 0 rows affected (0.016 sec)
+
+MariaDB [amar]> TRUNCATE TABLE staff;
+Query OK, 0 rows affected (0.006 sec)
+
+MariaDB [amar]> drop table staff;
+Query OK, 0 rows affected (0.004 sec)
+
+MariaDB [amar]>

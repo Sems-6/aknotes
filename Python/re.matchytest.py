@@ -1,3 +1,3 @@
 import re
-result=re.match('w',"welcome have a nice day",flags=0)
+result=re.match('r','W',"welcome have a nice day")
 print(result)
